@@ -1,4 +1,4 @@
 # dorset-team-4-ticketing
 
-Names: Théodore Cadet, Adrien Gruel, Thibault Sulem 
+Names: Théodore Cadet, Adrien Gruel, Thibault Sulem, Thomas Cardiet
 
