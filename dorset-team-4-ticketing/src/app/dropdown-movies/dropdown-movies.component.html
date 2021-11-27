@@ -1,9 +1,18 @@
 <section id="events">
-  <article *ngFor="let oneEvent of allEvents" id="event1" class="the-event">
-    <h2>Event {{oneEvent}}</h2>
+  <article *ngFor="let oneEvent of allEvents" id="event1" class="the-event"
+    [ngClass]="oneEvent == statusEvent ? 'selected-event' : 'unselected-event'">
+    <div class="title-event">
+      <h2 (click)="dropEvent({oneEvent})">
+        Event {{oneEvent}}
+      </h2>
+      <div (click)="closeDrop()" class="close-drop">X</div>
+    </div>
     <section class="times-event">
-      <article *ngFor="let oneTime of timeOfOneEvent" id="time1" class="theTime">
-        <ul>
+
+      <article *ngFor="let oneTime of timeOfOneEvent" id="time1" class="the-time"
+        [ngClass]="oneTime == statusTime ? 'selected-time' : 'unselected-time'">
+
+        <ul (click)="dropTime({oneTime})">
           <li>
             <p>10/11/21 21:00</p>
           </li>
@@ -22,16 +31,18 @@
           </article>
           <article>
             <h5 class="titleSeats">Child seats</h5>
-            <div  class="buttonSeats">
-              <button (click)="childMinusSeats()">-</button>
+            <div class="buttonSeats">
+              <button (click)="numberAdultSeats > 0 ? childMinusSeats(): '' "
+                [ngClass]="numberAdultSeats > 0 ? 'success' : 'danger'">-</button>
               <p>{{numberChildSeats}}</p>
-              <button (click)="childPlusSeats()">+</button>
+              <button (click)="numberAdultSeats > 0 ? childPlusSeats() : ''"
+                [ngClass]="numberAdultSeats > 0 ? 'success' : 'danger'">+</button>
             </div>
           </article>
         </section>
-        <button>Booking now</button>
+        <button [ngClass]="numberAdultSeats > 0 ? 'canBook' : 'cannotBook'">Booking now</button>
       </article>
-      <!-- <article id="time2" class="theTime">
+      <!-- <article id="time2" class="the-time">
         <p>13/11/21 21:00</p>
         <p>100/100</p>
         <button>Complete</button>
@@ -45,7 +56,7 @@
   <!-- <article id="event2" class="theEvent">
     <h2>Event 2</h2>
     <section>
-      <article id="time1" class="theTime">
+      <article id="time1" class="the-time">
         <p>10/11/21 21:00</p>
         <p>40/100</p>
         <button>Booking now</button>
@@ -57,7 +68,7 @@
 
 
       </article>
-      <article id="time2" class="theTime">
+      <article id="time2" class="the-time">
         <p>13/11/21 21:00</p>
         <p>100/100</p>
         <button>Complete</button>

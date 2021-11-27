@@ -1,49 +1,120 @@
+@import "dropdown-movies-variables.component.scss";
+
 .number-of-place {
   color: aqua;
 }
 
-.the-event {
-  h2 {
-    background-color: rgb(245, 77, 77);
+#events {
+  margin: 0;
+  padding: 0;
 
+  .the-event {
+    .the-time {
+      padding: 5% 5%;
+      display: none;
+    }
   }
 
-  .number-of-place {
-    display: flex;
-    flex-direction: column;
+  .close-drop {
+    display: none;
+  }
 
-    article {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      margin-bottom: 20px;
-
-      // flex-direction: column;
-      h5.titleSeats {
-        width: 30%;
-      }
-
-      div.buttonSeats {
-        display: flex;
-        // align-items: center;
-        justify-content: center;
-        width: 50%;
-
-        button {
-          font-size: 32px;
-          width: 40%;
-          border-radius: 10px;
-        }
-
-        p {
-          width: 20%;
-          text-align: center;
-        }
-
-
-      }
-
-
+  .the-event.selected-event {
+    .the-time {
+      display: block;
+      background-color: rgba(200, 200, 200, 0.5);
     }
+
+    .the-time.unselected-time {
+      .number-of-place {
+        display: none;
+      }
+    }
+    .the-time.selected-time {
+      height: 40vh;
+      .number-of-place {
+        display: flex;
+      }
+    }
+
+    // background-color: green;
+    .title-event {
+      position: relative;
+
+      h2 {
+        background-color: rgb(245, 77, 77);
+        padding: 5% 10%;
+        margin: 0;
+      }
+
+      .close-drop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 5%;
+        z-index: 5;
+        width: 15%;
+        height: 100%;
+        top: 0;
+      }
+    }
+
+    .number-of-place {
+      display: none;
+      flex-direction: column;
+
+      article {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+        // flex-direction: column;
+        h5.titleSeats {
+          width: 30%;
+          margin: 0;
+        }
+
+        div.buttonSeats {
+          display: flex;
+          // align-items: center;
+          justify-content: center;
+          width: 50%;
+
+          button {
+            font-size: 32px;
+            width: 40%;
+            border-radius: 10px;
+          }
+
+          p {
+            width: 20%;
+            text-align: center;
+          }
+
+
+        }
+
+
+      }
+    }
+  }
+
+  .the-event.unselected-event {
+    h2 {
+      background-color: rgb(161, 161, 161);
+      padding: 5% 10%;
+      margin: 0;
+
+      .close-drop {
+        display: none;
+      }
+    }
+
+    .number-of-place {
+      display: none;
+    }
+
   }
 }

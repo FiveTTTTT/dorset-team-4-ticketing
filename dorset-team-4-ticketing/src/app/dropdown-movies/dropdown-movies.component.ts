@@ -14,6 +14,24 @@ export class DropdownMoviesComponent implements OnInit {
 
 
   constructor() { }
+  statusEvent: any;
+  statusTime: any;
+
+  dropEvent(n) {
+    this.statusEvent = n.oneEvent;
+    console.log(n);
+    console.log(this.statusEvent);
+
+  }
+  dropTime(n) {
+    this.statusTime = n.oneTime;
+    console.log(n);
+    console.log(this.statusTime);
+  }
+  closeDrop() {
+    this.statusEvent = null;
+    this.statusTime = null;
+  }
 
   adultMinusSeats() {
     if (this.numberAdultSeats > 0) {
@@ -22,7 +40,6 @@ export class DropdownMoviesComponent implements OnInit {
         this.numberChildSeats = 0
       }
     }
-    console.log();
   }
 
   adultPlusSeats() {
@@ -30,7 +47,6 @@ export class DropdownMoviesComponent implements OnInit {
       this.numberAdultSeats++;
 
     }
-    console.log();
   }
 
   childMinusSeats() {
@@ -38,8 +54,6 @@ export class DropdownMoviesComponent implements OnInit {
       if (this.numberChildSeats > 0) {
         this.numberChildSeats--;
       }
-      console.log();
-
     }
   }
 
@@ -48,10 +62,9 @@ export class DropdownMoviesComponent implements OnInit {
       if (this.numberChildSeats < 4) {
         this.numberChildSeats++;
 
-      }
 
+      }
     }
-    console.log();
   }
 
   // childMinusSeats(seats) {
@@ -61,8 +74,8 @@ export class DropdownMoviesComponent implements OnInit {
   // }
 
   ngOnInit() {
-    this.allEvents = [1];
-    this.timeOfOneEvent = [1];
+    this.allEvents = [1, 2];
+    this.timeOfOneEvent = [1, 2];
     this.numberAdultSeats = 0;
     this.numberChildSeats = 0;
 
