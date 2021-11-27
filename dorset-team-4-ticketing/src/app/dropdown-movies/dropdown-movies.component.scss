@@ -1,11 +1,49 @@
-.numberOfPlace
-{
+.number-of-place {
   color: aqua;
 }
-.theEvent
-{
-  h2{
+
+.the-event {
+  h2 {
     background-color: rgb(245, 77, 77);
 
+  }
+
+  .number-of-place {
+    display: flex;
+    flex-direction: column;
+
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 20px;
+
+      // flex-direction: column;
+      h5.titleSeats {
+        width: 30%;
+      }
+
+      div.buttonSeats {
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        width: 50%;
+
+        button {
+          font-size: 32px;
+          width: 40%;
+          border-radius: 10px;
+        }
+
+        p {
+          width: 20%;
+          text-align: center;
+        }
+
+
+      }
+
+
+    }
   }
 }

@@ -1,25 +1,42 @@
 <section id="events">
-  <article *ngFor="let tag of userTags" id="event1" class="theEvent">
-    <h2>Event 1</h2>
-    <section>
-      <article id="time1" class="theTime">
-        <p>10/11/21 21:00</p>
-        <p>40/100</p>
+  <article *ngFor="let oneEvent of allEvents" id="event1" class="the-event">
+    <h2>Event {{oneEvent}}</h2>
+    <section class="times-event">
+      <article *ngFor="let oneTime of timeOfOneEvent" id="time1" class="theTime">
+        <ul>
+          <li>
+            <p>10/11/21 21:00</p>
+          </li>
+          <li>
+            <p>Seat already taken: 40/100</p>
+          </li>
+        </ul>
+        <section class="number-of-place">
+          <article>
+            <h5 class="titleSeats">Adult Seats</h5>
+            <div class="buttonSeats">
+              <button (click)="adultMinusSeats()">-</button>
+              <p>{{numberAdultSeats}}</p>
+              <button (click)="adultPlusSeats()">+</button>
+            </div>
+          </article>
+          <article>
+            <h5 class="titleSeats">Child seats</h5>
+            <div  class="buttonSeats">
+              <button (click)="childMinusSeats()">-</button>
+              <p>{{numberChildSeats}}</p>
+              <button (click)="childPlusSeats()">+</button>
+            </div>
+          </article>
+        </section>
         <button>Booking now</button>
-        <div class="numberOfPlace">
-          <button>-</button>
-          <p>0</p>
-          <button>+</button>
-        </div>
-
-
       </article>
-      <article id="time2" class="theTime">
+      <!-- <article id="time2" class="theTime">
         <p>13/11/21 21:00</p>
         <p>100/100</p>
         <button>Complete</button>
 
-      </article>
+      </article> -->
 
     </section>
 

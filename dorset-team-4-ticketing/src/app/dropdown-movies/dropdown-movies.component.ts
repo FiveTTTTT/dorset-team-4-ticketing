@@ -7,13 +7,66 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DropdownMoviesComponent implements OnInit {
 
-  userTags: any;
+  allEvents: any;
+  timeOfOneEvent: any;
+  numberAdultSeats: any;
+  numberChildSeats: any;
+
 
   constructor() { }
 
+  adultMinusSeats() {
+    if (this.numberAdultSeats > 0) {
+      this.numberAdultSeats--;
+      if (this.numberAdultSeats == 0) {
+        this.numberChildSeats = 0
+      }
+    }
+    console.log();
+  }
+
+  adultPlusSeats() {
+    if (this.numberAdultSeats < 4) {
+      this.numberAdultSeats++;
+
+    }
+    console.log();
+  }
+
+  childMinusSeats() {
+    if (this.numberAdultSeats > 0) {
+      if (this.numberChildSeats > 0) {
+        this.numberChildSeats--;
+      }
+      console.log();
+
+    }
+  }
+
+  childPlusSeats() {
+    if (this.numberAdultSeats > 0) {
+      if (this.numberChildSeats < 4) {
+        this.numberChildSeats++;
+
+      }
+
+    }
+    console.log();
+  }
+
+  // childMinusSeats(seats) {
+  //   if (this.numberAdultSeats > 0) {
+  //     this.minusSeats(seats);
+  //   }
+  // }
+
   ngOnInit() {
-    this.userTags = 3;
-    console.log(this.userTags);
+    this.allEvents = [1];
+    this.timeOfOneEvent = [1];
+    this.numberAdultSeats = 0;
+    this.numberChildSeats = 0;
+
+    // console.log(this.allEvents);
   }
 
 }
