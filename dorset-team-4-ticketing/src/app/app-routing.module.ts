@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { DropdownMoviesComponent } from "./dropdown-movies/dropdown-movies.component";
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { SelectSeatComponent } from "./select-seat/select-seat.component";
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleMoviePageComponent } from './single-movie-page/single-movie-page.component';
+import {BookingComponent} from "./booking/booking.component";
 
 const routes: Routes = [
   {
@@ -16,7 +16,11 @@ const routes: Routes = [
     path: 'select-seat', component: SelectSeatComponent
   },
   {
-    path: 'confimation-page', component: ConfirmationPageComponent
+    path: 'booking', component: BookingComponent
+
+  },
+  {
+    path: 'confirmation-page', component: ConfirmationPageComponent
 
   },
   {
@@ -31,16 +35,7 @@ const routes: Routes = [
   //   path: '',
   //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   // },
-=======
-import {BookingComponent} from "./booking/booking.component";
-
-const routes: Routes = [
-  {
-    path: 'booking', component: BookingComponent
-
-  },
->>>>>>> booking
-];
+  ]
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

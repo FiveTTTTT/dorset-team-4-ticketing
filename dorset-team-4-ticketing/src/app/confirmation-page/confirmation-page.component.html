@@ -11,7 +11,7 @@
           Full name
         </h4>
         <p>
-          <!-- {{user.name}} --> *** *****
+          {{data.booking.customer.firstName}} {{data.booking.customer.lastName}}
         </p>
 
       </div>
@@ -20,7 +20,18 @@
           Email address
         </h4>
         <p>
-          <!-- {{user.mail}}--> *****@****
+          {{data.booking.customer.email}}
+        </p>
+
+      </div>
+      <div>
+        <h4>
+          Seats
+        </h4>
+        <p>
+          <span *ngFor="let seat of data.booking.seats">
+            {{seat.l}}{{seat.n}}
+          </span>
         </p>
 
       </div>
