@@ -18,7 +18,7 @@ import { SingleMoviePageComponent } from './single-movie-page/single-movie-page.
 @NgModule({
   declarations: [AppComponent, SelectSeatComponent, DropdownMoviesComponent, ConfirmationPageComponent, LandingPageComponent, SingleMoviePageComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule, AppModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

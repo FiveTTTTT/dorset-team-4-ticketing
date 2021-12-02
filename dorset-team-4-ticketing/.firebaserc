@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dorset-team-4-ticketing-71ecb"
+  },
+  "targets": {
+    "dorset-team-4-ticketing-71ecb": {
+      "hosting": {
+        "app": [
+          "dorset-team-4-ticketing-71ecb"
+        ]
+      }
+    }
+  }
+}
