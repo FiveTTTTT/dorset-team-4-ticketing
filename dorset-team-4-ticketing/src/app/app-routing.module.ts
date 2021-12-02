@@ -2,13 +2,23 @@ import { NgModule } from '@angular/core';
 import { DropdownMoviesComponent } from "./dropdown-movies/dropdown-movies.component";
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SingleMoviePageComponent } from './single-movie-page/single-movie-page.component';
 
 const routes: Routes = [
   {
-    path: '', component: DropdownMoviesComponent
+    path: '', component: LandingPageComponent
 
   }, {
     path: 'confimation-page', component: ConfirmationPageComponent
+
+  },
+  {
+    path: 'dropdown-page', component: ConfirmationPageComponent
+
+  },
+  {
+    path: 'single-movie-page/:name', component: SingleMoviePageComponent
 
   },
   // {
