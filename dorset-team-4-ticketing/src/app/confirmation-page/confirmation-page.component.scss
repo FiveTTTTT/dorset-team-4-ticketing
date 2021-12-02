@@ -1,0 +1,43 @@
+@import "../app-component-variables.scss";
+
+#confirmation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $primaryTxt;
+  }
+
+  #qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  #booking-info {
+    display: flex;
+    justify-content: space-between;
+
+    #user-info {
+      width: 40%;
+
+    }
+
+    #event-info {
+      width: 40%;
+
+    }
+
+  }
+}
