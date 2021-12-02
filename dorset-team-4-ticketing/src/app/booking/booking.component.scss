@@ -1,0 +1,28 @@
+#booking {
+  width: 90%;
+  margin: auto;
+  margin-top: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    width: 45%;
+  }
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding: 5px;
+}

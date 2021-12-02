@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { DropdownMoviesComponent } from "./dropdown-movies/dropdown-movies.component";
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+<<<<<<< HEAD
 import { SelectSeatComponent } from "./select-seat/select-seat.component";
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -30,6 +31,15 @@ const routes: Routes = [
   //   path: '',
   //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   // },
+=======
+import {BookingComponent} from "./booking/booking.component";
+
+const routes: Routes = [
+  {
+    path: 'booking', component: BookingComponent
+
+  },
+>>>>>>> booking
 ];
 @NgModule({
   imports: [

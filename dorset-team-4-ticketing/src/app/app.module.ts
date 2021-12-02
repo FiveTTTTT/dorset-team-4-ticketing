@@ -13,10 +13,11 @@ import { DropdownMoviesComponent } from './dropdown-movies/dropdown-movies.compo
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleMoviePageComponent } from './single-movie-page/single-movie-page.component';
+import {BookingComponent} from "./booking/booking.component";
 
 
 @NgModule({
-  declarations: [AppComponent, SelectSeatComponent, DropdownMoviesComponent, ConfirmationPageComponent, LandingPageComponent, SingleMoviePageComponent],
+  declarations: [AppComponent, SelectSeatComponent, DropdownMoviesComponent, ConfirmationPageComponent, LandingPageComponent, SingleMoviePageComponent, BookingComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
