@@ -1,0 +1,17 @@
+<div class="row" id="seating">
+
+  <h1>Select your seat</h1>
+
+  <div id="seat-selector">
+
+    <div class="seats">
+      <div *ngFor="let letter of alphabetToArray()" class="cinema-row">
+        <div class="seat" *ngFor="let in of counter(rows);let i = index" (click)="addSeat({n: i+1, l: letter}, $event)">
+          {{letter}}{{i+1}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
