@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-// import { DropdownMoviesComponent } from "./dropdown-movies/dropdown-movies.component";
+import { DropdownMoviesComponent } from "./dropdown-movies/dropdown-movies.component";
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SelectSeatComponent } from "./select-seat/select-seat.component";
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
@@ -19,7 +19,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'dropdown-page', component: ConfirmationPageComponent
+    path: 'dropdown-page', component: DropdownMoviesComponent
 
   },
   {
