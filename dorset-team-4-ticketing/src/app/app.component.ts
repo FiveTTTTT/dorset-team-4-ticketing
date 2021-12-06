@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from  '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private  store: AngularFirestore) {}
+  ngOnInit(){
+    this.getAll();
+  }
+
+
+  getAll(){
+
+    this.store.collection('userInfo').snapshotChanges().subscribe((response) => {
+      console.log('reponse ', response);
+    })
+  }
 }
