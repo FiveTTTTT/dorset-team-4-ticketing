@@ -47,6 +47,10 @@
       flex-wrap: nowrap;
       overflow-x: auto;
 
+      .hide-movie{
+        display: none;
+      }
+
       .display-movie {
         width: 100px;
         height: 100px;
