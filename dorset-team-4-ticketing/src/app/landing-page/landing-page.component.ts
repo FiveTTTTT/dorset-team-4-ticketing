@@ -30,31 +30,15 @@ export class LandingPageComponent implements OnInit {
       .get()
       .subscribe((ss) => {
         ss.docs.forEach((doc) => {
-          // console.log(doc);
           console.log("hello");
-
 
           this.myArray.push(doc.data());
 
-
         });
-
-
-
-        console.log(this.myArray[0].title);
+        // console.log(this.myArray[0].title);
       });
 
-    console.log(this.newArrayany);
-  }
-
-
-  getAll() {
-    // const test =
-    //   return test
-    // console.log(test);
-
-
-
+    // console.log(this.newArrayany);
   }
 
 }
