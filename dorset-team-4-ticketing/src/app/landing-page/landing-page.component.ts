@@ -14,7 +14,7 @@ export class LandingPageComponent implements OnInit {
   newMovies: any;
   trendingMovies: any;
   familyMovies: any;
-
+  
   myArray: any[] = [];
   newArrayany: any[] = [];
 
@@ -24,6 +24,7 @@ export class LandingPageComponent implements OnInit {
     this.familyMovies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     // this.getAll();
     this.newArrayany = [0, 2, 3]
+
 
     this.store
       .collection("movies")

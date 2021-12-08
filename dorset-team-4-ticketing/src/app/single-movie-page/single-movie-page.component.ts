@@ -20,10 +20,13 @@ export class SingleMoviePageComponent implements OnInit {
   name: any;
   theMovieInfo: any;
 
+
   ngOnInit() {
+
     this.route.params.subscribe(params => {
       this.name = params['name'];
     });
+    this.theMovieInfo = {};
 
     this.store
       .collection("movies")
@@ -34,9 +37,10 @@ export class SingleMoviePageComponent implements OnInit {
           this.theMovie.push(doc.data());
 
         });
-        // console.log(this.myArray[0].title);
+
         this.findTheMovie(this.name);
-        console.log(this.theMovieInfo.title);
+        // console.log(this.theMovieInfo);
+
       });
 
   }
@@ -44,11 +48,11 @@ export class SingleMoviePageComponent implements OnInit {
   findTheMovie(nameOfMovie) {
     var isTheRightMovie = false;
     var n = -1;
-    while (!isTheRightMovie && n <= this.theMovie.length) {
-      // console.log(this.theMovie[0]);
+    while (!isTheRightMovie && n < this.theMovie.length - 1) {
       n++;
-      // console.log(`length : ${this.theMovie.length}`);
-
+      console.log(n);
+      console.log(this.theMovie.length);
+      console.log(n < this.theMovie.length);
 
       if (this.theMovie[n].title == nameOfMovie) {
         isTheRightMovie = true;
