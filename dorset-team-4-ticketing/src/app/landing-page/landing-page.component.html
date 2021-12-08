@@ -2,8 +2,11 @@
   <article id="new-movies">
     <h3>New movies</h3>
     <ul class="display-movies">
-      <li *ngFor="let movie of myArray" class="display-movie">
-        <div>{{movie.title}}</div>
+      <li *ngFor="let movie of myArray" [ngClass]="movie.isNew == false ? 'hide-movie' : 'display-movie' ">
+        <a [routerLink]="['/single-movie-page', movie.title]">
+
+          <div>{{movie.title}}</div>
+        </a>
       </li>
 
     </ul>
@@ -21,11 +24,14 @@
     </ul>
 
   </article>
-  <article id="family-movies">
-    <h3>Family movies</h3>
+  <article id="action-movies">
+    <h3>Action movies</h3>
     <ul class="display-movies">
-      <li *ngFor="let newMovie of newMovies" class="display-movie">
-        <div> {{newMovie}} !</div>
+      <li *ngFor="let movie of myArray" class="display-movie">
+        <a [routerLink]="['/single-movie-page', movie.title]">
+
+          <div> {{movie.title}} !</div>
+        </a>
       </li>
 
     </ul>
