@@ -1,0 +1,46 @@
+#seating {
+  width: 95%;
+  margin: auto;
+  margin-top: 0;
+}
+
+#seating > h1 {
+  text-align: center;
+}
+
+#row-title-numbers {
+  display: flex;
+  margin-left: 30px;
+}
+
+#row-title-numbers > div, #row-title-letters > div {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+//selector
+
+.cinema-row {
+  display: flex;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: solid 1px red;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.reserved {
+  background-color: palevioletred;
+}
+
+.selected {
+  background-color: green;
+}

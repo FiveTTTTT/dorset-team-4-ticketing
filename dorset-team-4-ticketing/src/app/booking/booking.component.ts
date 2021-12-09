@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer} from "../models/customer.model";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-booking',
@@ -8,18 +8,13 @@ import {Customer} from "../models/customer.model";
 })
 export class BookingComponent implements OnInit {
 
-  customer: Customer = {
-    firstName: '',
-    lastName: '',
-    email: ''
-  };
+  constructor(public data: DataService) { }
 
-  constructor() { }
+  ngOnInit() {this.toggleSeats()}
 
-  ngOnInit() {}
-
-  submitCustomer(): void {
-
+  toggleSeats() : void {
+    let component = $("#select-seat");
+    this.data.booking.adults > 0 ? component.show() : component.hide();
   }
 
 }
