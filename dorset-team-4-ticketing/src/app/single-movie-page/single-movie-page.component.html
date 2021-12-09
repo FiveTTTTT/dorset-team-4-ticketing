@@ -1,4 +1,20 @@
-<section>
-  <h1>{{name}}</h1>
+<section id="single-movie">
+  <h1>{{theMovieInfo.title}}</h1>
+  <article>
+    <h2>Summary</h2>
+    <p>{{theMovieInfo.summary}}</p>
+    <h4>Duartion : {{theMovieInfo.duration}}</h4>
+  </article>
+  <article>
+    <div *ngFor="let date of theMovieInfo.date">
+      <h2>{{date.day}}</h2>
 
+      <ul>
+        <li *ngFor="let hour of date.hours">
+          {{hour}}
+        </li>
+
+      </ul>
+    </div>
+  </article>
 </section>

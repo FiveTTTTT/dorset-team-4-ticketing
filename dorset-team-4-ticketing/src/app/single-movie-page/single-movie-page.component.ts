@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 @Component({
@@ -11,18 +12,56 @@ export class SingleMoviePageComponent implements OnInit {
   router: any;
   private sub: any;
 
-  constructor(private route: ActivatedRoute,) {
+  constructor(private route: ActivatedRoute, private store: AngularFirestore) {
 
   }
 
+  theMovie: any[] = [];
   name: any;
+  theMovieInfo: any;
+
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      this.name = params['name']; // (+) converts string 'id' to a number
-      // In a real app: dispatch action to load the details here.
+
+    this.route.params.subscribe(params => {
+      this.name = params['name'];
     });
-    console.log(this.name);
+    this.theMovieInfo = {};
+
+    this.store
+      .collection("movies")
+      .get()
+      .subscribe((ss) => {
+        ss.docs.forEach((doc) => {
+
+          this.theMovie.push(doc.data());
+
+        });
+
+        this.findTheMovie(this.name);
+        // console.log(this.theMovieInfo);
+
+      });
+
+  }
+
+  findTheMovie(nameOfMovie) {
+    var isTheRightMovie = false;
+    var n = -1;
+    while (!isTheRightMovie && n < this.theMovie.length - 1) {
+      n++;
+      console.log(n);
+      console.log(this.theMovie.length);
+      console.log(n < this.theMovie.length);
+
+      if (this.theMovie[n].title == nameOfMovie) {
+        isTheRightMovie = true;
+        this.theMovieInfo = this.theMovie[n];
+      }
+      // console.log(n);
+
+    }
+
 
   }
 
