@@ -2,6 +2,8 @@
   width: 90%;
   margin: auto;
   margin-top: 0;
+  overflow: auto;
+
 
   div {
     margin-top: 20px;
@@ -11,7 +13,8 @@
     text-align: center;
   }
 
-  input, select {
+  input,
+  select {
     width: 100%;
   }
 
