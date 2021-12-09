@@ -2,22 +2,46 @@
 
   <h1>Customer Informations</h1>
 
-  <div class="flex">
-    <div>
-      <label for="firstname">First name</label>
-      <input type="text" id="firstname" [(ngModel)]="data.booking.customer.firstName" placeholder="firstname">
-    </div>
-
-    <div>
-      <label for="lastname">Last name</label>
-      <input type="text" id="lastname" [(ngModel)]="data.booking.customer.lastName" placeholder="lastname">
-    </div>
+  <div>
+    <label for="firstname">First name</label>
+    <input type="text" id="firstname" [(ngModel)]="data.booking.customer.firstName">
   </div>
 
   <div>
-    <label for="email">Email address</label>
-    <input type="email" id="email" [(ngModel)]="data.booking.customer.email" placeholder="email">
+    <label for="lastname">Last name</label>
+    <input type="text" id="lastname" [(ngModel)]="data.booking.customer.lastName">
   </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="data.booking.customer.email">
+  </div>
+
+  <div class="flex">
+    <div>
+      <label for="email">Number of adults</label>
+      <select id="adults" [(ngModel)]="data.booking.adults" (change)="toggleSeats()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div>
+      <label for="email">Number of childrens</label>
+      <select id="childrens" [(ngModel)]="data.booking.childrens">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+  </div>
+
+  <app-select-seat id="select-seat"></app-select-seat>
 
   <button routerLink="/select-seat">Book ticket</button>
 </div>

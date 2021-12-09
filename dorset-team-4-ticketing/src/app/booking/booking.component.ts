@@ -10,6 +10,11 @@ export class BookingComponent implements OnInit {
 
   constructor(public data: DataService) { }
 
-  ngOnInit() {}
+  ngOnInit() {this.toggleSeats()}
+
+  toggleSeats() : void {
+    let component = $("#select-seat");
+    this.data.booking.adults > 0 ? component.show() : component.hide();
+  }
 
 }

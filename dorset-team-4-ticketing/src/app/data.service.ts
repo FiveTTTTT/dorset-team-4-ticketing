@@ -13,7 +13,9 @@ export class DataService {
       lastName: '',
       email: ''
     },
-    seats: []
+    seats: [],
+    adults: 0,
+    childrens: 0,
   }
 
   constructor() {}

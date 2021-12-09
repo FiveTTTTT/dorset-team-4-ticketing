@@ -11,7 +11,6 @@ export class SelectSeatComponent implements OnInit {
 
   alphabet = 'abcdefghijklmnopqrstuvwxyz';
   rows = 10; //number of seat rows (26 max)
-  max_selection = 3; //Max seat selection
 
   constructor(public data: DataService) { }
 
@@ -30,6 +29,7 @@ export class SelectSeatComponent implements OnInit {
   }
 
   addSeat(seat, event) : void {
+
     let seat_element = $(event.target);
     let found = this.data.booking.seats.find(e => e.n === seat.n && e.l === seat.l);
     if (found) {
@@ -39,7 +39,7 @@ export class SelectSeatComponent implements OnInit {
       i === 0 ? this.data.booking.seats.splice(i, i + 1) : this.data.booking.seats.splice(i, i)
       return;
     }
-    if(this.data.booking.seats.length >= this.max_selection) return;
+    if(this.data.booking.seats.length >= (parseInt(String(this.data.booking.adults)) + parseInt(String(this.data.booking.childrens)))) return;
     //Seat not set
     this.data.booking.seats.push(seat);
     seat_element.addClass("selected");
