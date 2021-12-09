@@ -1,0 +1,35 @@
+#single-movie {
+
+  overflow-y: auto;
+  padding: 7%;
+  width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #FFCC70;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      padding: 20px 30px;
+      background-color: #FFCC70;
+      border-radius: 20px;
+
+      color: black;
+      font-weight: bold;
+
+    }
+  }
+}
