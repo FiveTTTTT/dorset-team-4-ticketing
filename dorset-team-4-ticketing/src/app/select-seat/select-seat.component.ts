@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from "jquery";
-import {DataService} from "../data.service";
+import { DataService } from "../data.service";
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 @Component({
   selector: 'app-select-seat',
@@ -12,23 +14,43 @@ export class SelectSeatComponent implements OnInit {
   alphabet = 'abcdefghijklmnopqrstuvwxyz';
   rows = 10; //number of seat rows (26 max)
 
-  constructor(public data: DataService) { }
+  movieSeats: any;
+  
 
-  ngOnInit() {}
+
+
+  constructor(public data: DataService, private store: AngularFirestore) { }
+
+  ngOnInit() {
+    this.store
+      .collection("movies")
+      .doc("FourthMovie")
+      .get()
+      .subscribe((ss) => {
+
+
+        this.movieSeats = ss.data();
+        this.movieSeats = this.movieSeats.seats;
+        console.log(this.movieSeats);
+
+      });
+  }
+
+
 
   counter(i: number) {
     return new Array(i);
   }
 
-  alphabetToArray() : any[] {
+  alphabetToArray(): any[] {
     let array = [];
-    for(let i = 0; i<this.rows; i++) {
+    for (let i = 0; i < this.rows; i++) {
       array.push(this.alphabet[i].toUpperCase());
     }
     return array;
   }
 
-  addSeat(seat, event) : void {
+  addSeat(seat, event): void {
 
     let seat_element = $(event.target);
     let found = this.data.booking.seats.find(e => e.n === seat.n && e.l === seat.l);
@@ -39,7 +61,7 @@ export class SelectSeatComponent implements OnInit {
       i === 0 ? this.data.booking.seats.splice(i, i + 1) : this.data.booking.seats.splice(i, i)
       return;
     }
-    if(this.data.booking.seats.length >= (parseInt(String(this.data.booking.adults)) + parseInt(String(this.data.booking.childrens)))) return;
+    if (this.data.booking.seats.length >= (parseInt(String(this.data.booking.adults)) + parseInt(String(this.data.booking.childrens)))) return;
     //Seat not set
     this.data.booking.seats.push(seat);
     seat_element.addClass("selected");

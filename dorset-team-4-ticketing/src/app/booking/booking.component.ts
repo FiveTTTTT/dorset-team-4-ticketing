@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
 
 
 @Component({
@@ -13,16 +11,13 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class BookingComponent implements OnInit {
   router: any;
 
-  private sub: any;
-
-  constructor(public data: DataService, private route: ActivatedRoute, private store: AngularFirestore) { }
+  constructor(public data: DataService, private store: AngularFirestore) { }
 
   movieSeats: any;
 
 
   ngOnInit() {
     this.toggleSeats();
-    // this.findSeatsInDb();
   }
 
   toggleSeats(): void {
@@ -31,8 +26,6 @@ export class BookingComponent implements OnInit {
   }
 
   findSeatsInDb(seats) {
-
-
 
     this.store
       .collection("movies")
@@ -54,9 +47,6 @@ export class BookingComponent implements OnInit {
           if (this.movieSeats[n].horizontal == column && this.movieSeats[n].vertical == row) {
             seatExist = true;
             this.movieSeats[n].isTaken = true;
-            console.log(1);
-
-
 
           } else {
             while (n < this.movieSeats.length && this.movieSeats[n].horizontal != column || this.movieSeats[n].vertical != row) {
@@ -67,23 +57,12 @@ export class BookingComponent implements OnInit {
                 this.movieSeats[n].isTaken = true;
 
               }
-
             }
-
-          }
-
-          if (seatExist) {
-
-
           }
         })
         this.updateSelectedSeats(this.movieSeats);
 
       });
-
-
-
-
   }
 
   updateSelectedSeats(n) {

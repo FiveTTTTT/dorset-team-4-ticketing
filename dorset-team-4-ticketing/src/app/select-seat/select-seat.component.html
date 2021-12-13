@@ -5,9 +5,9 @@
   <div id="seat-selector">
 
     <div class="seats">
-      <div *ngFor="let letter of alphabetToArray()" class="cinema-row">
-        <div class="seat" *ngFor="let in of counter(rows);let i = index" (click)="addSeat({n: i+1, l: letter}, $event)">
-          {{letter}}{{i+1}}
+      <div *ngFor="let letter of movieSeats" class="cinema-row">
+        <div class="seat" *ngFor="let in of counter(rows); let i = index" (click)="addSeat({n: i+1, l: letter}, $event)">
+          {{letter.vertical}}{{i+1}}
         </div>
       </div>
     </div>
