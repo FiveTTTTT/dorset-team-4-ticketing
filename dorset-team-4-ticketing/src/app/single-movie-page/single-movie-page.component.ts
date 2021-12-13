@@ -43,6 +43,13 @@ export class SingleMoviePageComponent implements OnInit {
 
       });
 
+      this.store
+      .collection("movies")
+
+  }
+
+  theUltimateTest(){
+
   }
 
   findTheMovie(nameOfMovie) {

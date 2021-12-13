@@ -1,11 +1,16 @@
+@import "../../theme/variables.scss";
+
 #movie-choice {
   width: 100%;
   padding: 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   overflow-y: auto;
+
+  min-height: 100vh;
+  background: $bgGradient;
 
   #new-movies {
     .display-movie {
@@ -43,6 +48,10 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    h3 {
+      color: $primaryTxt;
+    }
+
 
     .display-movies {
       width: 100%;
@@ -61,9 +70,9 @@
       }
 
       .display-movie {
-        width: 100px;
+        width: 120px;
         height: 20vh;
-        margin-right: 2%;
+        margin-right: 8%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -76,10 +85,13 @@
 
         a {
           position: absolute;
+          bottom: 0;
+          text-decoration: none;
+          border-radius: 0 0 20px 20px;
           color: azure;
+          padding: 0 7%;
           background-color: rgba(0, 0, 0, 0.5);
 
-          div {}
         }
       }
     }
