@@ -1,12 +1,7 @@
-@import "../../theme/variables.scss";
-
 #seating {
   width: 95%;
   margin: auto;
   margin-top: 0;
-
-  min-height: 100vh;
-  background: $bgGradient;
 }
 
 #seating>h1 {
