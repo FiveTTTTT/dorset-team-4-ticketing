@@ -1,9 +1,11 @@
-@import "../app-component-variables.scss";
+@import "../../theme/variables.scss";
 
 #confirmation-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  background: $bgGradient;
 
   h1 {
     text-align: center;

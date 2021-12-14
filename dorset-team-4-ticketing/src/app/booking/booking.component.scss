@@ -1,7 +1,14 @@
+@import "../../theme/variables.scss";
+
 #booking {
-  width: 90%;
+  width: 100%;
   margin: auto;
+  padding: 0 5%;
   margin-top: 0;
+  overflow: auto;
+  min-height: 100vh;
+  background: $bgGradient;
+
 
   div {
     margin-top: 20px;
@@ -11,7 +18,8 @@
     text-align: center;
   }
 
-  input, select {
+  input,
+  select {
     width: 100%;
   }
 

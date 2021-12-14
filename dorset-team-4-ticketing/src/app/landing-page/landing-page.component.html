@@ -30,7 +30,7 @@
       <li *ngFor="let movie of myArray" [ngClass]="movie.categories != 'action' ? 'hide-movie' : 'display-movie' ">
         <a [routerLink]="['/single-movie-page', movie.title]">
 
-          <div> {{movie.title}} !</div>
+          <div> {{movie.title}}</div>
         </a>
       </li>
 
