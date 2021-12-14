@@ -8,6 +8,11 @@ import {Customer} from "./models/customer.model";
 export class DataService {
 
   booking: Booking = {
+    session: {
+      movieTitle: '',
+      date: '',
+      time: ''
+    },
     customer: {
       firstName: '',
       lastName: '',
