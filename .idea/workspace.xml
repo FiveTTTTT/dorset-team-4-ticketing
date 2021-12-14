@@ -20,13 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a33268f-0b08-43d5-8f77-74182e86d42e" name="Default Changelist" comment=":construction: update data&#10;&#10;- add session data functions">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dorset-team-4-ticketing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/session.customer.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/booking/booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/booking/booking.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/booking.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/booking.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +54,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1639511358" />
+                    <option name="branchName" value="data" />
+                    <option name="lastUsedInstant" value="1639512770" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="data" />
-                    <option name="lastUsedInstant" value="1639064822" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1639511358" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="booking" />

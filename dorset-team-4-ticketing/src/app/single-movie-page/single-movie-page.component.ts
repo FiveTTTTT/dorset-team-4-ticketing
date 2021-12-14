@@ -540,10 +540,9 @@ export class SingleMoviePageComponent implements OnInit {
         });
 
         this.findTheMovie(this.name);
-
       });
 
-    this.updateMovies(this.theTab)
+    this.updateMovies(this.theTab);
   }
 
   updateMovies(n) {

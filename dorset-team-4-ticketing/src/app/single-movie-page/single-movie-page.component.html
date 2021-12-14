@@ -10,8 +10,8 @@
       <h2>{{date.day}}</h2>
 
       <ul>
-        <li *ngFor="let hour of date.hours" attr.data-movietitle="{{theMovieInfo.title}}" attr.data-date="{{date.day}}" attr.data-time="{{hour}}" (click)="bookMovie($event)">
-          {{hour}}
+        <li *ngFor="let hour of date.hours" attr.data-movietitle="{{theMovieInfo.title}}" attr.data-date="{{date.day}}" attr.data-time="{{hour.hour}}" (click)="bookMovie($event)">
+          {{hour.hour}}
         </li>
 
       </ul>

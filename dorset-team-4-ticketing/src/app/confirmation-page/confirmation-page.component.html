@@ -2,7 +2,7 @@
   <h1>Purchase confirmation</h1>
   <section id="qr-code">
     <img src="../../assets/icon/favicon.png" alt="">
-    <p>#398DJDMZK26FN</p>
+    <p id="order-id">#398DJDMZK26FN</p>
   </section>
   <section id="booking-info">
     <article id="user-info">
@@ -10,7 +10,7 @@
         <h4>
           Full name
         </h4>
-        <p>
+        <p id="order-fullName">
           {{data.booking.customer.firstName}} {{data.booking.customer.lastName}}
         </p>
 
@@ -19,7 +19,7 @@
         <h4>
           Email address
         </h4>
-        <p>
+        <p id="order-email">
           {{data.booking.customer.email}}
         </p>
 
@@ -28,7 +28,7 @@
         <h4>
           Seats
         </h4>
-        <p>
+        <p id="order-seats">
           <span *ngFor="let seat of data.booking.seats">
             {{seat.l}}{{seat.n}}
           </span>
@@ -39,13 +39,13 @@
     <article id="event-info">
       <div>
         <h4>Event</h4>
-        <p>
+        <p id="order-movieTitle">
           {{data.booking.session.movieTitle}}
         </p>
       </div>
       <div>
         <h4>Date</h4>
-        <p>
+        <p id="order-date">
           {{data.booking.session.date}}
           at {{data.booking.session.time}}
         </p>

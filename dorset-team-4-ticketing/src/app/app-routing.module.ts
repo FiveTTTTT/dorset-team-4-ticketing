@@ -16,7 +16,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'confirmation-page', component: ConfirmationPageComponent
+    path: 'confirmation-page/:id', component: ConfirmationPageComponent
 
   },
   {

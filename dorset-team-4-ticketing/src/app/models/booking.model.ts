@@ -1,5 +1,5 @@
 import {Customer} from "./customer.model";
-import {Session} from "./session.customer.model";
+import {Session} from "./session.customer.model"
 
 export class Booking {
   session: Session;

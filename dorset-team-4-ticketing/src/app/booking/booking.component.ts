@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../data.service";
 import {Router} from "@angular/router";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
+import {doc} from "@angular/fire/firestore";
 
 @Component({
   selector: 'app-booking',
@@ -9,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class BookingComponent implements OnInit {
 
-  constructor(public data: DataService, public router: Router) { }
+  constructor(public data: DataService, public router: Router, private store: AngularFirestore) { }
 
   ngOnInit() {this.toggleSeats(false)}
 
@@ -40,7 +42,11 @@ export class BookingComponent implements OnInit {
       alert('Choisissez vos places');
       return;
     }
-    this.router.navigate(['confirmation-page']);
+    this.store
+      .collection("orders")
+      .add(this.data.booking).then(docRef => {
+      this.router.navigate(['confirmation-page', docRef.id]);
+    })
   }
 
 }
