@@ -544,17 +544,32 @@ export class SingleMoviePageComponent implements OnInit {
 
       });
 
-    this.updateMovies(this.theTab)
+    // this.updateMovies(this.theTab)
   }
 
-  updateMovies(n) {
-    this.store
-      .collection("movies")
-      .doc("FourthMovie")
-      .update({
-        seats: n
-      })
-  }
+  // updateMovies(n) {
+  //   this.store
+  //     .collection("movies")
+  //     .doc("FourthMovie")
+  //     .update({
+  //       date: [
+  //         {
+  //           day: "4/03/23", hours: [
+  //             {hour: "8am", seats: n },
+  //            {hour:  "9am", seats: n },
+  //             {hour: "10pm", seats: n }
+  //           ]
+  //         },
+  //         {
+  //           day: "5/03/23", hours: [
+  //             {hour: "8am", seats: n },
+  //            {hour:  "9am", seats: n },
+  //             {hour: "10pm", seats: n }
+  //           ]
+  //         }
+  //       ]
+  //     })
+  // }
 
   findTheMovie(nameOfMovie) {
     var isTheRightMovie = false;
