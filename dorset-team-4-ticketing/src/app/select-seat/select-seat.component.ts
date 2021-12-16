@@ -15,6 +15,8 @@ export class SelectSeatComponent implements OnInit {
   rows = 10; //number of seat rows (26 max)
 
   movieSeats: any;
+  nbMovies: any = 0;
+  theMovie: any[] = ["1"];
 
 
 
@@ -24,23 +26,19 @@ export class SelectSeatComponent implements OnInit {
   ngOnInit() {
     this.store
       .collection("movies")
-      .doc("FourthMovie")
-      .get()
-      .subscribe((ss) => {
-
-
-        this.movieSeats = ss.data();
-        this.movieSeats = this.movieSeats.date[0].hours[0].seats;
-        // console.log(this.movieSeats);
-
-      });
-
-      this.store
-      .collection("movies")
       .get()
       .subscribe((ss) => {
         ss.docs.forEach((doc) => {
-          console.log(doc.data());
+
+          let theMovieS = [];
+          theMovieS.push(doc.data());
+          if (theMovieS[0].title == this.nbMovies.name) {
+            this.theMovie.push(doc.data());
+            this.movieSeats = theMovieS[0].date[0].hours[0].seats
+            console.log(this.movieSeats);
+          }
+
+          // console.log(this.nbMovies.name);
 
         });
       });
