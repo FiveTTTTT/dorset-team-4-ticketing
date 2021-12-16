@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a33268f-0b08-43d5-8f77-74182e86d42e" name="Default Changelist" comment=":construction: update data&#10;&#10;- add session data functions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/booking/booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/booking/booking.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/booking.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/booking.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ElmWorkspace">
+    <elmProjects />
+    <settings elmCompilerPath="" elmFormatPath="" elmTestPath="" isElmFormatOnSaveEnabled="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="data" />
+                    <option name="lastUsedInstant" value="1639512770" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1639511358" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="booking" />
+                    <option name="lastUsedInstant" value="1639061871" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="ProjectId" id="223KGFjYQ87tghieyz6h487YN2v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="org.elm.workspace.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/dorset-team-4-ticketing/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a33268f-0b08-43d5-8f77-74182e86d42e" name="Default Changelist" comment="" />
+      <created>1639060733220</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639060733220</updated>
+      <workItem from="1639060734511" duration="7831000" />
+      <workItem from="1639510670107" duration="629000" />
+    </task>
+    <task id="LOCAL-00001" summary=":construction: update booking&#10;&#10;- change booking and seating on onepage">
+      <created>1639060925403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639060925403</updated>
+    </task>
+    <task id="LOCAL-00002" summary=":construction: update data&#10;&#10;- add session data functions">
+      <created>1639511306433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639511306433</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":construction: update booking&#10;&#10;- change booking and seating on onepage" />
+    <MESSAGE value=":construction: update data&#10;&#10;- add session data functions" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction: update data&#10;&#10;- add session data functions" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="125" width="1080" height="526" key="DiffContextDialog" timestamp="1639061653046">
+      <screen x="0" y="25" width="1280" height="727" />
+    </state>
+    <state x="100" y="125" width="1080" height="526" key="DiffContextDialog/0.25.1280.727@0.25.1280.727" timestamp="1639061653046" />
+    <state x="326" y="94" key="RollbackChangesDialog" timestamp="1639064300033">
+      <screen x="0" y="25" width="1280" height="727" />
+    </state>
+    <state x="326" y="94" key="RollbackChangesDialog/0.25.1280.726@0.25.1280.726" timestamp="1639061024639" />
+    <state x="326" y="94" key="RollbackChangesDialog/0.25.1280.727@0.25.1280.727" timestamp="1639064300033" />
+    <state x="240" y="112" key="Vcs.Push.Dialog.v2" timestamp="1639060946462">
+      <screen x="0" y="25" width="1280" height="726" />
+    </state>
+    <state x="240" y="112" key="Vcs.Push.Dialog.v2/0.25.1280.726@0.25.1280.726" timestamp="1639060946462" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1639067975361">
+      <screen x="0" y="25" width="1280" height="728" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.25.1280.728@0.25.1280.728" timestamp="1639067975361" />
+  </component>
+</project>

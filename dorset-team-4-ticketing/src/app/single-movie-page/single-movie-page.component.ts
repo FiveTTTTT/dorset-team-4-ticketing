@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import {DataService} from "../data.service";
 
 
 @Component({
@@ -9,10 +10,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./single-movie-page.component.scss'],
 })
 export class SingleMoviePageComponent implements OnInit {
-  router: any;
-  private sub: any;
 
-  constructor(private route: ActivatedRoute, private store: AngularFirestore) {
+  constructor(private route: ActivatedRoute, private store: AngularFirestore, public data: DataService, public router: Router) {
 
   }
 
@@ -541,7 +540,6 @@ export class SingleMoviePageComponent implements OnInit {
         });
 
         this.findTheMovie(this.name);
-
       });
 
     // this.updateMovies(this.theTab)
@@ -591,5 +589,16 @@ export class SingleMoviePageComponent implements OnInit {
 
   }
 
+  bookMovie(event) {
+    let movieTitle = event.target.dataset.movietitle;
+    let date = event.target.dataset.date;
+    let time = event.target.dataset.time;
+    this.data.booking.session = {
+      movieTitle: movieTitle,
+      date: date,
+      time: time
+    }
+    this.router.navigate(['booking']);
+  }
 
 }

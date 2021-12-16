@@ -3,14 +3,14 @@
   <article>
     <h2>Summary</h2>
     <p>{{theMovieInfo.summary}}</p>
-    <h4>Duartion : {{theMovieInfo.duration}}</h4>
+    <h4>Duration : {{theMovieInfo.duration}}</h4>
   </article>
   <article>
     <div *ngFor="let date of theMovieInfo.date">
       <h2>{{date.day}}</h2>
 
       <ul>
-        <li *ngFor="let hour of date.hours">
+        <li *ngFor="let hour of date.hours" attr.data-movietitle="{{theMovieInfo.title}}" attr.data-date="{{date.day}}" attr.data-time="{{hour.hour}}" (click)="bookMovie($event)">
           {{hour.hour}}
         </li>
 

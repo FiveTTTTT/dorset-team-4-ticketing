@@ -19,7 +19,7 @@
   <div class="flex">
     <div>
       <label for="email">Number of adults</label>
-      <select id="adults" [(ngModel)]="data.booking.adults" (change)="toggleSeats()">
+      <select id="adults" [(ngModel)]="data.booking.adults" (change)="updatePlaces()">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -30,7 +30,7 @@
     </div>
     <div>
       <label for="email">Number of childrens</label>
-      <select id="childrens" [(ngModel)]="data.booking.childrens">
+      <select id="childrens" [(ngModel)]="data.booking.childrens" (change)="updatePlaces()">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -43,5 +43,6 @@
 
   <app-select-seat id="select-seat"></app-select-seat>
 
-  <button routerLink="/confirmation-page" (click)="findSeatsInDb(data.booking.seats)">Book ticket</button>
+  <button id="booking-button" (click)="confirmBooking()">Book ticket</button>
+
 </div>
