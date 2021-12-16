@@ -6,9 +6,16 @@
 
     <div class="seats">
       <div *ngFor="let letter of movieSeats" class="cinema-row">
-        <div class="seat" *ngFor="let in of counter(rows); let i = index" (click)="addSeat({n: i+1, l: letter}, $event)">
-          {{letter.vertical}}{{i+1}}
+        <div *ngIf="letter.isTaken; else elseBlock" class="seat seat-taken">
+          {{letter.vertical}}{{letter.horizontal}}
         </div>
+        <ng-template #elseBlock>
+          <div class="seat" (click)="addSeat({n: i+1, l: letter}, $event)">
+
+            {{letter.vertical}}{{letter.horizontal}}
+          </div>
+
+        </ng-template>
       </div>
     </div>
 

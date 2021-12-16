@@ -1,5 +1,5 @@
 #seating {
-  width: 95%;
+  width: 100%;
   margin: auto;
   margin-top: 0;
 }
@@ -22,20 +22,39 @@
   font-size: 20px;
 }
 
-//selector
+#seat-selector{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.seats{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
 .cinema-row {
   display: flex;
+
+  // width: 100%;
+
 }
 
 .seat {
-  width: 30px;
+  width: 31px;
   height: 30px;
-  margin: 5px;
+  margin: 3px;
   border: solid 1px red;
   font-size: 15px;
   text-align: center;
   border-radius: 10px 10px 0 0;
+
+  // width: 9%;
+}
+.seat-taken{
+  background-color: red;
+  border: solid 1px blue;
 }
 
 .reserved {

@@ -15,7 +15,7 @@ export class SelectSeatComponent implements OnInit {
   rows = 10; //number of seat rows (26 max)
 
   movieSeats: any;
-  
+
 
 
 
@@ -30,9 +30,19 @@ export class SelectSeatComponent implements OnInit {
 
 
         this.movieSeats = ss.data();
-        this.movieSeats = this.movieSeats.seats;
-        console.log(this.movieSeats);
+        this.movieSeats = this.movieSeats.date[0].hours[0].seats;
+        // console.log(this.movieSeats);
 
+      });
+
+      this.store
+      .collection("movies")
+      .get()
+      .subscribe((ss) => {
+        ss.docs.forEach((doc) => {
+          console.log(doc.data());
+
+        });
       });
   }
 
