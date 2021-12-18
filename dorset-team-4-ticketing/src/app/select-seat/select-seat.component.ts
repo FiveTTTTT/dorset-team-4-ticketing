@@ -32,7 +32,9 @@ export class SelectSeatComponent implements OnInit {
 
           let theMovieS = [];
           theMovieS.push(doc.data());
-          if (theMovieS[0].title == this.nbMovies.name) {
+
+          if (theMovieS[0].title == this.data.booking.session.movieTitle) {
+            
             this.theMovie.push(doc.data());
             this.movieSeats = theMovieS[0].date[0].hours[0].seats
             console.log(this.movieSeats);

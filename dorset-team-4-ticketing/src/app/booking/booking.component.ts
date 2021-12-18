@@ -65,7 +65,9 @@ export class BookingComponent implements OnInit {
             }
           }
         })
-        // this.updateSelectedSeats(this.movieSeats);
+        console.log(this.movieSeats);
+
+        this.updateSelectedSeats(this.movieSeats);
 
       });
   }
@@ -82,6 +84,15 @@ export class BookingComponent implements OnInit {
       .add(this.data.booking).then(docRef => {
       this.router.navigate(['confirmation-page', docRef.id]);
     })
+  }
+
+  updateSelectedSeats(n) {
+    this.store
+      .collection("movies")
+      .doc("FourthMovie")
+      .update({
+        seats: n
+      })
   }
 
 }
