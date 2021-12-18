@@ -11,15 +11,9 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class SelectSeatComponent implements OnInit {
 
-  alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  rows = 10; //number of seat rows (26 max)
-
   movieSeats: any;
   nbMovies: any = 0;
   theMovie: any[] = ["1"];
-
-
-
 
   constructor(public data: DataService, private store: AngularFirestore) { }
 
@@ -34,12 +28,8 @@ export class SelectSeatComponent implements OnInit {
           theMovieS.push(doc.data());
           if (theMovieS[0].title == this.data.booking.session.movieTitle) {
             this.theMovie.push(doc.data());
-            this.movieSeats = theMovieS[0].date[0].hours[0].seats
-            console.log(this.movieSeats);
+            this.movieSeats = theMovieS[0].date[0].hours[0].seats;
           }
-
-          // console.log(this.nbMovies.name);
-
         });
       });
   }
@@ -48,14 +38,6 @@ export class SelectSeatComponent implements OnInit {
 
   counter(i: number) {
     return new Array(i);
-  }
-
-  alphabetToArray(): any[] {
-    let array = [];
-    for (let i = 0; i < this.rows; i++) {
-      array.push(this.alphabet[i].toUpperCase());
-    }
-    return array;
   }
 
   addSeat(seat, event): void {

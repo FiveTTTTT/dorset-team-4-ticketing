@@ -19,14 +19,10 @@ export class DropdownMoviesComponent implements OnInit {
 
   dropEvent(n) {
     this.statusEvent = n.oneEvent;
-    console.log(n);
-    console.log(this.statusEvent);
 
   }
   dropTime(n) {
     this.statusTime = n.oneTime;
-    console.log(n);
-    console.log(this.statusTime);
   }
   closeDrop() {
     this.statusEvent = null;
@@ -67,19 +63,11 @@ export class DropdownMoviesComponent implements OnInit {
     }
   }
 
-  // childMinusSeats(seats) {
-  //   if (this.numberAdultSeats > 0) {
-  //     this.minusSeats(seats);
-  //   }
-  // }
-
   ngOnInit() {
     this.allEvents = [1, 2];
     this.timeOfOneEvent = [1, 2];
     this.numberAdultSeats = 0;
     this.numberChildSeats = 0;
-
-    // console.log(this.allEvents);
   }
 
 }
