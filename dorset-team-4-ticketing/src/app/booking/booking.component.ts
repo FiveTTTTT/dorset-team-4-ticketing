@@ -11,6 +11,8 @@ import {doc} from "@angular/fire/firestore";
 })
 export class BookingComponent implements OnInit {
 
+  movieSeats: any;
+
   constructor(public data: DataService, public router: Router, private store: AngularFirestore) { }
 
   ngOnInit() {this.toggleSeats(false)}
@@ -25,14 +27,47 @@ export class BookingComponent implements OnInit {
 
   toggleSeats(value) : void {
     let component = $("#select-seat");
-    let button = $("#booking-button")
-    if(value) {
-      component.show();
-      button.show();
-      return;
-    }
-    component.hide();
-    button.hide();
+    this.data.booking.adults > 0 ? component.show() : component.hide();
+  }
+
+  findSeatsInDb(seats) {
+
+    this.store
+      .collection("movies")
+      .doc("FourthMovie")
+      .get()
+      .subscribe((ss) => {
+
+
+        this.movieSeats = ss.data()
+        this.movieSeats = this.movieSeats.seats;
+
+        seats.forEach(e => {
+          let column = e.n.toString();
+          let row = e.l;
+
+          let n = 0;
+          let seatExist = false;
+          console.log(" this.movieSeats.length" + this.movieSeats.length);
+          if (this.movieSeats[n].horizontal == column && this.movieSeats[n].vertical == row) {
+            seatExist = true;
+            this.movieSeats[n].isTaken = true;
+
+          } else {
+            while (n < this.movieSeats.length && this.movieSeats[n].horizontal != column || this.movieSeats[n].vertical != row) {
+              n++;
+
+              if (this.movieSeats[n].horizontal == column && this.movieSeats[n].vertical == row) {
+                seatExist = true;
+                this.movieSeats[n].isTaken = true;
+
+              }
+            }
+          }
+        })
+        // this.updateSelectedSeats(this.movieSeats);
+
+      });
   }
 
   confirmBooking() : void {
