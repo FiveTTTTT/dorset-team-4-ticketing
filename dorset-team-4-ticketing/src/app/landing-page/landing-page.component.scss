@@ -11,6 +11,26 @@
 
   min-height: 100vh;
   background: $bgGradient;
+  .Spider-Man{
+    background-image: url(../../assets/imgs/Spider-Man.jpg);
+    background-size: cover;
+
+  }
+  .Shrek{
+    background-image: url(../../assets/imgs/Shrek.jpg);
+    background-size: cover;
+
+  }
+  .Lord{
+    background-image: url(../../assets/imgs/The.jpg);
+    background-size: cover;
+
+  }
+  .Venom{
+    background-image: url(../../assets/imgs/Venom.jpg);
+    background-size: cover;
+
+  }
 
   #new-movies {
     .display-movie {
