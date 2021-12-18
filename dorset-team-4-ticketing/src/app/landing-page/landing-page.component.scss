@@ -1,5 +1,17 @@
 @import "../../theme/variables.scss";
 
+.closeEverything {
+  width: 100%;
+
+  a {
+    font-size: 40px;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+  }
+
+}
+
 #movie-choice {
   width: 100%;
   padding: 0 5%;
@@ -11,22 +23,26 @@
 
   min-height: 100vh;
   background: $bgGradient;
-  .Spider-Man{
+
+  .Spider-Man {
     background-image: url(../../assets/imgs/Spider-Man.jpg);
     background-size: cover;
 
   }
-  .Shrek{
+
+  .Shrek {
     background-image: url(../../assets/imgs/Shrek.jpg);
     background-size: cover;
 
   }
-  .Lord{
+
+  .Lord {
     background-image: url(../../assets/imgs/Lord.jpg);
     background-size: cover;
 
   }
-  .Venom{
+
+  .Venom {
     background-image: url(../../assets/imgs/Venom.jpg);
     background-size: cover;
 

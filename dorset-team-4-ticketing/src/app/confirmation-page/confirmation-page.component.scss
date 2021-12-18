@@ -1,5 +1,17 @@
 @import "../../theme/variables.scss";
 
+.closeEverything {
+  width: 100%;
+
+  a {
+    font-size: 40px;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+  }
+
+}
+
 #confirmation-page {
   display: flex;
   flex-direction: column;
