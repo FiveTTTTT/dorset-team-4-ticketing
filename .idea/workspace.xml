@@ -19,15 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a33268f-0b08-43d5-8f77-74182e86d42e" name="Default Changelist" comment=":construction: update data&#10;&#10;- add session data functions">
+    <list default="true" id="1a33268f-0b08-43d5-8f77-74182e86d42e" name="Default Changelist" comment=":construction: update data&#10;&#10;- add firebase orders stockage&#10;- update confirmation-page with order id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/booking/booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/booking/booking.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/confirmation-page/confirmation-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/booking.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/models/booking.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dorset-team-4-ticketing/src/app/single-movie-page/single-movie-page.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +47,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="data" />
-                    <option name="lastUsedInstant" value="1639512770" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1639518629" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1639511358" />
+                    <option name="branchName" value="data" />
+                    <option name="lastUsedInstant" value="1639512770" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="booking" />
@@ -122,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639511306433</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":construction: update data&#10;&#10;- add firebase orders stockage&#10;- update confirmation-page with order id">
+      <created>1639518535137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639518535141</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":construction: update booking&#10;&#10;- change booking and seating on onepage" />
     <MESSAGE value=":construction: update data&#10;&#10;- add session data functions" />
-    <option name="LAST_COMMIT_MESSAGE" value=":construction: update data&#10;&#10;- add session data functions" />
+    <MESSAGE value=":construction: update data&#10;&#10;- add firebase orders stockage&#10;- update confirmation-page with order id" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction: update data&#10;&#10;- add firebase orders stockage&#10;- update confirmation-page with order id" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="125" width="1080" height="526" key="DiffContextDialog" timestamp="1639061653046">
@@ -161,10 +162,11 @@
     </state>
     <state x="326" y="94" key="RollbackChangesDialog/0.25.1280.726@0.25.1280.726" timestamp="1639061024639" />
     <state x="326" y="94" key="RollbackChangesDialog/0.25.1280.727@0.25.1280.727" timestamp="1639064300033" />
-    <state x="240" y="112" key="Vcs.Push.Dialog.v2" timestamp="1639060946462">
-      <screen x="0" y="25" width="1280" height="726" />
+    <state x="240" y="112" key="Vcs.Push.Dialog.v2" timestamp="1639518654041">
+      <screen x="0" y="25" width="1280" height="728" />
     </state>
     <state x="240" y="112" key="Vcs.Push.Dialog.v2/0.25.1280.726@0.25.1280.726" timestamp="1639060946462" />
+    <state x="240" y="112" key="Vcs.Push.Dialog.v2/0.25.1280.728@0.25.1280.728" timestamp="1639518654041" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1639067975361">
       <screen x="0" y="25" width="1280" height="728" />
     </state>
